@@ -1,0 +1,55 @@
+.order {
+    margin-top: 5%;
+    background-color: white;
+    width: 100%;
+    height: auto;
+}
+
+h5 {
+    background-color: rgb(48, 40, 125);
+    color: white;
+}
+
+.card-img-top {
+    width: 80%;
+    margin-top: 1%;
+    margin-left: 1%;
+
+}
+
+a{
+    color: white;
+}
+
+button {
+    width: 30%;
+    margin-left: 70%;
+}
+
+.text-center {
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.text-right {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-right: 3%;
+}
+
+.first {
+    padding-left: 2rem;
+    width: 15rem;
+}
+
+.seconde {
+    width: 10rem;
+}
+
+.third {
+    width: 25rem;
+}
+
+.fourth {
+    width: 6.6rem;
+}

@@ -1,0 +1,51 @@
+.container{
+    margin-top: 17%;
+}
+div.card.text-white.bg-danger.mb-3 {
+    width: 15rem;
+}
+
+.bg-danger {
+    background-color:rgb(48, 40, 125)!important;
+}
+
+button{
+    background-color: white;
+}
+
+.card-title {
+    font-size: 1rem;
+}
+.btn {
+    font-size: 0.75rem;
+}
+
+h2{
+    color: white;
+}
+
+@media (max-width: 900px) and (orientation: portrait){
+    div.card.text-white.bg-danger.mb-3 {
+        width: 21.25rem;
+
+    }
+    .container{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+}
+
+@media (max-width: 900px) and (orientation: landscape){
+    div.card.text-white.bg-danger.mb-3 {
+        width: 37.5rem;
+
+    }
+    .container{
+        margin-top: 0%;
+        margin-left: 7%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+}

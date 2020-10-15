@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="card text-white bg-danger mb-3">
+    <div class="card-header text-center">Coşul tau</div>
+    <div class="card-body">
+      <h5 class="card-title">Total: {{ total }} Lei</h5>
+      <hr>
+      <h6 class="card-title">Articole adaugate:</h6>
+      <ul>
+        <li *ngFor="let order of orders.productOrders">
+          {{ order.product.name }} - {{ order.quantity }} buc.
+        </li>
+      </ul>
+      <button type="button" class="btn btn-ligth btn-block"
+      (click)="finishOrder()" [disabled]="orders.productOrders.length == 0">Continua catre plata</button>
+      <button type="button" class="btn btn-block" (click)="reset()"> Goleşte coşul
+      </button>
+    </div>
+  </div>
+</div>

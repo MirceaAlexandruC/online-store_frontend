@@ -1,0 +1,88 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Online store</a>
+    <button class="navbar-toggler" data-toggle="collapse"
+    data-target="#navbar" aria-controls="navbar"
+    aria-expanded="false" aria-label="Toggle Navigation"
+    (click)="toggleCollapsed()"
+    type="button" name="button">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarResponsiive" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+        <ul class="navbar-nav">
+          <li class="nav-item nav-link">
+            <a class=" nav-link " href="/">
+              Acasa
+            </a>
+          </li>
+          <li class="nav-item nav-link">
+            <a class="nav-link"
+            href="/0">
+             TV
+            </a>
+          </li>
+           <li class="nav-item nav-link">
+            <a class="nav-link"
+            href="/1">
+             Telefoane mobile
+            </a>
+           </li>
+            <li class="nav-item nav-link">
+              <a class="nav-link "
+            href="/2">
+             Camere foto DSRL
+             </a>
+            </li>
+            <li class="nav-item nav-link">
+              <a class="nav-link "
+            href="/3">
+             Laptop
+             </a>
+            </li>
+        </ul>
+          <ul class="navbar-nav span-register">
+            <li class="nav-item nav-link">
+              <a class=" nav-link " href="/login">
+                Login
+              </a>
+            </li>
+            <li class="nav-item nav-link">
+              <a class="nav-link"
+              href="/register">
+               Register
+              </a>
+            </li>
+          </ul>
+    </div>
+</nav>
+
+
+<div class="cover">
+<img src="../../assets/Home_banner_SS.jpg" alt="SuperSale">
+</div>
+<!--content ecommerce -->
+<div class="row">
+<div class="col-md-9">
+  <!--app-products-->
+  <app-products #productsC [hidden]="orderFinished" [filter]="categoryType"></app-products>
+</div>
+
+<!--shopping-cart-->
+<div class="col-md-3">
+  <app-shopping-cart (onOrderFinished)="finishOrder($event)" #shoppingCartC
+  [hidden]="orderFinished"></app-shopping-cart>
+</div>
+<!--orders-->
+<div class="order">
+  <app-orders #ordersC [hidden]="!orderFinished" ></app-orders>
+</div>
+</div>
+
+<footer>
+<div class="footer">
+  <div class="footer-bg">
+    <div class="footer-copyright">Copyright &copy; 2020 <a href="https://github.com/MirceaAlexandruC">Mircea Cioata</a> si <a href="https://github.com/SerbanConstantin">Constantin Serban</a> Toate drepturile sunt rezervate.<br></div>
+  </div>
+</div>
+</footer>
+</div>

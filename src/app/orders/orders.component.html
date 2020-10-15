@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="order">
+    <header id="title">
+      <h5 class="text-center">Comanda</h5>
+    </header>
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th class="first">Imagine</th>
+            <th class="second">Produs</th>
+            <th class="third">Descriere</th>
+            <th class="fourth">Pret unitar</th>
+            <th class="fifth">Cantitate</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let order of orders.productOrders">
+          <!-- shopping cart contents -->
+          <tr class="productitm">
+            <td><img class="card-img-top" src="{{ order.product.pictureUrl }}"></td>
+            <td> {{ order.product.name }}</td>
+            <td> {{ order.product.description }} </td>
+            <td> {{ order.product.price }} Lei</td>
+            <td> {{ order.quantity }} buc</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h5 class="text-right">Total plata: {{ total }} Lei</h5>
+</div>
+  <button type="button" class="btn btn-primary btn-block" (click)="pay()"
+   *ngIf="!paid">Confirmare comanda</button>
+  <div class="alert alert-success" role="alert" *ngIf="paid">
+    <strong>Felicitari! </strong>Comanda dumneavastra a fost transmisa unui operator.
+  </div>
+   <button type="button" class="btn btn-primary btn-block">
+    <a href="/" > Inapoi Acasa</a>
+   </button>
+</div>
+
+
+
+

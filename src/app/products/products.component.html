@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row card-deck">
+    <div class="col-lg-4 col-md-6 mb-4" *ngFor="let order of productOrders">
+      <div class="card text-center">
+        <div class="card-header">
+          <h6>{{ order.product.name }}</h6>
+        </div>
+        <p class="card-description"> {{order.product.description}}</p>
+        <div class="card-body">
+          <a href="#">
+            <img class="card-img-top" src="{{ order.product.pictureUrl }}">
+          </a>
+          <h5 class="card-title">{{ order.product.price }} Lei</h5>
+          <div class="row">
+            <div class="col-4 padding-10" *ngIf="!isProductSelected(order.product)">
+                <input type="number" min="0" class="form-control" [(ngModel)]="order.quantity">
+            </div>
+            <div class="col-4 padding-0" *ngIf="!isProductSelected(order.product)">
+                <button type="button" class="btn btn-primary"
+                (click)="addToCart(order)" [disabled]="order.quantity <= 0"><span id="adaugaCos">Adauga in cos</span> </button>
+            </div>
+            <div class="col-12" *ngIf="isProductSelected(order.product)">
+                <button type="button" class="btn btn-default btn-block" (click)="removeFromCart(order)">
+                  Goleste cosul
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
